@@ -73,11 +73,11 @@ compas_fab.__version__
 ```
 You should see:
 ```console
-'0.11.0';
+'0.16.0';
 ```
 <img src="screenshots/versionCompas.png" width="100%">
 
-_In this step we are starting a python file, adding the package compas\_fab (which we installed in the previous step) and requesting the package&#39;s version. You should have installed the most current package. So a version of 0.11.0 or newer should be printed on the screen._ <br/><br/> 
+_In this step we are starting a python file, adding the package compas\_fab (which we installed in the previous step) and requesting the package&#39;s version. You should have installed the most current package. So a version of 0.16.0 or newer should be printed on the screen._ <br/><br/> 
 
     
 # **Part 3: Downloading github &amp; files needed to run robots from grasshopper**
