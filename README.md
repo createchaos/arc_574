@@ -34,7 +34,6 @@ conda remove --name your_env_name --all
 conda create -n your_env_name python=3.6 compas compas_fab --yes
 conda activate your_env_name
 python -m compas_rhino.install
-python -m compas_fab.rhino.install -v 6.0
 ```
 For the last two steps you will need to allow the anaconda prompt/terminal to make changes to local rhino files. So make sure you are logged in as an administrator.
 
@@ -60,7 +59,6 @@ Creates a new python environment and installs compas and compas_fab. Python envi
 Activates the environment created in the previous step  <br/><br/> 
    ```console 
    (your_env_name) python -m compas_rhino.install 
-   (your_env_name) python -m compas_fab.rhino.install -v 6.0 
    ```
 Installs compas and compas_fab for rhino <br/><br/> 
 * * *
