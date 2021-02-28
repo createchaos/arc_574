@@ -118,5 +118,4 @@ Docker for Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac
 # **Part 6: Install Visual Studio Code**
 https://code.visualstudio.com/
 
-Add a Docker extension for Visual Studio Code 
 
