@@ -113,6 +113,11 @@ activate your_env_name
 ```
 cd (insert here the path you just copied in step 4)
 git clone https://github.com/createchaos/abb_communication.git
+```
+6) A folder was just created in Documents > GitHub called abb_communication.  Copy the path for the abb_communication folder.
+
+```
+cd (insert here the path you just copied in step 6)
 pip install -e .
 python -m compas_rhino.install -p abb_communication
 ```
