@@ -98,10 +98,20 @@ _The ABB communication library is a collection of [python](https://www.python.or
 
 While Compas and CompasFab are available to download and install using only conda commands, the ABB communication library must be cloned from GitHub and then installed in a similar way. 
 
-You can use the command line to clone the repository or your favorite desktop application, such as the [Github app](https://desktop.github.com/). 
+You can clone the repository using a desktop application such as the [Github app](https://desktop.github.com/). To keep things simple, however, we are just going to close the repository using the command line.  
+
+1) Make a folder in Documents called GitHub
+2) Open Anaconda Prompt
+3) Use Anaconda Prompt to activate your environment (remember what you named your environment in Part 2!)
 
 ```
-cd path/to/your_repos
+activate your_env_name
+```
+4) Navigate to the GitHub folder that you created in Documents.  Copy the path.  
+5) Clone the repository
+
+```
+cd (insert here the path you just copied in step 4)
 git clone https://github.com/createchaos/abb_communication.git
 pip install -e .
 python -m compas_rhino.install -p abb_communication
@@ -115,8 +125,10 @@ more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/bac
 
 1) Docker reqires Windows 10 Pro, Enterprise, or Education.    
     1)To check what software you have on your computer, type "System Information" in the Search Box.
+    
     2)If you do not already have Windows 10 Pro, Enterprise, or Education, you can get a license here: 
         https://princeton.onthehub.com/ 
+   
     3)Click "start shopping", enter your Princeton login information, and download Windows 10 Education.
 
 2) Download Docker
