@@ -134,7 +134,7 @@ _Visual Studio Code allows us to visualize the Docker containers that are runnin
     2) Search for Docker 
     3) Install Docker extension
 
-<img src="screenshots/dockerextension.png" width="100%">
+<img src="screenshots/dockerextension.PNG" width="100%">
 
 
 
