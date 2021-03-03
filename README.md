@@ -110,6 +110,7 @@ Tip: don't forget the dot at the end of the `pip install -e .` command!
 
 # **Part 5: Install Docker**
 _We will use Docker to set up backends that will enable us to visualize the robots in Grasshopper. Docker containers are like pre-packaged bubbles of code that we can access to avoid building the robot communication setup from scratch._
+
 more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/backends.html 
 
 1) Docker reqires Windows 10 Pro, Enterprise, or Education.    
