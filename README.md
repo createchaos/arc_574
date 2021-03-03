@@ -102,8 +102,14 @@ You can clone the repository using a desktop application such as the [Github app
 
 1) Make a folder in Documents called GitHub
 2) Open Anaconda Prompt
-3) Use Anaconda Prompt to activate your environment (remember what you named your environment in Part 2!)
+3) Use Anaconda Prompt to activate your environment (from Part 2)
 
+If you don't remember what you named your environment in Part 2, type into Anaconda Prompt:
+```
+conda env list
+```
+
+Once you know the name of your environment, activate it.
 ```
 activate your_env_name
 ```
