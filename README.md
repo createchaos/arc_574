@@ -128,5 +128,13 @@ _Visual Studio Code allows us to visualize the Docker containers that are runnin
 
 1) Download Visual Studio code 
     https://code.visualstudio.com/
+    
+2) Install the Docker Extension for Visual Studio Code 
+    1) Navigate to the extensions tab (4th icon on the left bar with four boxes) 
+    2) Search for Docker 
+    3) Install Docker extension
+
+<img src="screenshots/dockerextension.png" width="100%">
+
 
 
