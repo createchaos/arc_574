@@ -94,7 +94,7 @@ _In this part you will download github desktop. You will use this to get a repos
 
     
 # **Part 4: ABB Communication**
-The ABB communication library is a collection of [python](https://www.python.org/doc/essays/blurb/) functions that makes communication between the ABB robot controller and your computer possible. While ABB provides its own software (RobotStudio) that allows you connect to the robot controller, change settings, send instructions, and also receive feedback, a python-based means of communication is much a easier to learn and implement in design projects, especially because we can execute python code directly from Rhino and Grasshopper.
+_The ABB communication library is a collection of [python](https://www.python.org/doc/essays/blurb/) functions that makes communication between the ABB robot controller and your computer possible. While ABB provides its own software (RobotStudio) that allows you connect to the robot controller, change settings, send instructions, and also receive feedback, a python-based means of communication is much a easier to learn and implement in design projects, especially because we can execute python code directly from Rhino and Grasshopper._
 
 While Compas and CompasFab are available to download and install using only conda commands, the ABB communication library must be cloned from GitHub and then installed in a similar way. 
 
@@ -109,13 +109,23 @@ python -m compas_rhino.install -p abb_communication
 Tip: don't forget the dot at the end of the `pip install -e .` command! 
 
 # **Part 5: Install Docker**
+_We will use Docker to set up backends that will enable us to visualize the robots in Grasshopper. Docker containers are like pre-packaged bubbles of code that we can access to avoid building the robot communication setup from scratch._
 more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/backends.html 
-Note: Docker requires at least Windows 10 Pro
 
-Docker for Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
-Docker for Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac 
+1) Docker reqires Windows 10 Pro, Enterprise, or Education.    
+    1)To check what software you have on your computer, type "System Information" in the Search Box.
+    2)If you do not already have Windows 10 Pro, Enterprise, or Education, you can get a license here: 
+        https://princeton.onthehub.com/ 
+    3)Click "start shopping", enter your Princeton login information, and download Windows 10 Education.
+
+2) Download Docker
+    Docker for Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
+    Docker for Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac 
 
 # **Part 6: Install Visual Studio Code**
-https://code.visualstudio.com/
+_Visual Studio Code allows us to visualize the Docker containers that are running on our machines._ 
+
+1) Download Visual Studio code 
+    https://code.visualstudio.com/
 
 
