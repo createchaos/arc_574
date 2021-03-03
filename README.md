@@ -114,7 +114,7 @@ activate your_env_name
 cd (insert here the path you just copied in step 4)
 git clone https://github.com/createchaos/abb_communication.git
 ```
-6) A folder was just created in Documents > GitHub called abb_communication.  Copy the path for the abb_communication folder.
+6) A folder was just created in Documents > GitHub called abb_communication.  Copy the path for the abb_communication folder. Run the following commands by copying them one at a time into Anaconda Prompt.  Press enter after each line.
 
 ```
 cd (insert here the path you just copied in step 6)
