@@ -147,6 +147,9 @@ more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/bac
 3) Check to see if Docker is running by looking for the whale
 <img src="screenshots/dockercheck.png" width="60%">
 
+4) If you get an error about needing to enable Virtualization in BIOS, follow the instructions here: https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html
+    Note: The instructions will vary depending on the type of computer you have
+
 # **Part 6: Install Visual Studio Code**
 _Visual Studio Code allows us to visualize the Docker containers that are running on our machines._ 
 
