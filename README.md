@@ -34,7 +34,6 @@ conda remove --name your_env_name --all
 conda create -n your_env_name python=3.6 compas compas_fab --yes
 conda activate your_env_name
 python -m compas_rhino.install
-python -m compas_fab.rhino.install -v 6.0
 ```
 For the last two steps you will need to allow the anaconda prompt/terminal to make changes to local rhino files. So make sure you are logged in as an administrator.
 
@@ -60,7 +59,6 @@ Creates a new python environment and installs compas and compas_fab. Python envi
 Activates the environment created in the previous step  <br/><br/> 
    ```console 
    (your_env_name) python -m compas_rhino.install 
-   (your_env_name) python -m compas_fab.rhino.install -v 6.0 
    ```
 Installs compas and compas_fab for rhino <br/><br/> 
 * * *
@@ -73,60 +71,70 @@ compas_fab.__version__
 ```
 You should see:
 ```console
-'0.11.0';
+'0.16.0';
 ```
 <img src="screenshots/versionCompas.png" width="100%">
 
-_In this step we are starting a python file, adding the package compas\_fab (which we installed in the previous step) and requesting the package&#39;s version. You should have installed the most current package. So a version of 0.11.0 or newer should be printed on the screen._ <br/><br/> 
+_In this step we are starting a python file, adding the package compas\_fab (which we installed in the previous step) and requesting the package&#39;s version. You should have installed the most current package. So a version of 0.16.0 or newer should be printed on the screen._ <br/><br/> 
 
     
 # **Part 3: Downloading github &amp; files needed to run robots from grasshopper**
 
-_In this part you will download github desktop. You will use this to get some repositories from the web that will help you work with the robots in grasshopper. We are using github desktop to retrieve these files because we want to clone them instead of downloading them. Cloning is similar to downloading but has the option to update the files if they are changed by the creator._ ![](RackMultipart20200820-4-13h5aym_html_b5ed5bc59b1b939f.png)
+_In this part you will download github desktop. You will use this to get a repository from the web that will help you work with the robots in grasshopper. We are using github desktop to retrieve these files because we want to clone them instead of downloading them. Cloning is similar to downloading but has the option to update the files if they are changed by the creator._ ![](RackMultipart20200820-4-13h5aym_html_b5ed5bc59b1b939f.png)
 
 1) Download &amp; setup GitHub for desktop: [https://desktop.github.com](https://desktop.github.com/) <img src="screenshots/GitHubLogo.png" width="10%">
     1) The proper type of GitHub should appear (i.e. mac, windows x64, etc.) however if it does not just download the appropriate version for your computer.
     2) Click installer for Windows and double click the downloaded zip folder for Mac to install.
     3) Open GitHub desktop.
     4) If you have an account sign in. If not it is recommended that you make one.
+ 
 2) Go to documents and find the GitHub folder
     1) This is where the repositories at default will be saved
     2) If you want you can create a subfolder for the repositories from this class (see part 3. v.). Make sure to not have spaces in the name of the subfolder and try to stay away from special characters as well. These specific characters can cause issues when referencing the paths (as we see in iv.)
-3) Now we will clone two repositories that will allow us to us grasshopper and python to communicate to the robots _(To clone each repository it is going to be the same process except for the step iii.)_
-    1) to file and select clone repository
-    2) In the new window select the URL option
-    3) Under repository URL type <br/>
-        First time: [https://github.com/createchaos/ur_online_control_speckle](https://github.com/createchaos/ur_online_control_speckle) <br/> _These files will help you connect to the robots_ <br/>
-        Second time: [https://github.com/createchaos/assembly_information_model](https://github.com/createchaos/assembly_information_model) <br/> _These files will help with creating the robot inside rhino_
-    4) Make sure that the local path is correct. Depending on which repository you are downloading it should look something like ```C:\Users\name\Documents\GitHub\ur_online_control (or assembly_information_model)``` in Windows and ```\Users\name\Documents\GitHub\assembly_information_model``` in Mac
-    5) _(Optional)_ If you created a subfolder change path to ```...\Documents\GitHub\name of your subfolder\ur_online_control (same with assembly_information_model)``` <br/>
-    <img src="screenGIFs/git clone.gif" width="60%"> <br/>
-
-
-4) If these repositories need to be updated you can simply do it with GitHub desktop.
-     1. First hit the down arrow beside the current repository and navigate to one of the two we cloned in the steps above.<br/>
-      <img src="screenshots/cloningStep1.png" width="60%"> <br/>
-     2. GitHub will automatically check to see if the files have been updated. If for some reason it does not, simply click Fetch origin.<br/>
-     <img src="screenshots/cloningStep2.png" width="60%"> <br/>
-     3. If there is an update, you see a blue box that says pull origin. Click that box and GitHub will update your files so that they match the creator&#39;s. This is why cloning is super useful!<br/>
-     <img src="screenshots/cloningStep3.png" width="60%"><br/>
 
     
-# **Part 4: Adding these files to rhino**
+# **Part 4: ABB Communication**
+_The ABB communication library is a collection of [python](https://www.python.org/doc/essays/blurb/) functions that makes communication between the ABB robot controller and your computer possible. While ABB provides its own software (RobotStudio) that allows you connect to the robot controller, change settings, send instructions, and also receive feedback, a python-based means of communication is much a easier to learn and implement in design projects, especially because we can execute python code directly from Rhino and Grasshopper._
 
-_In part 2 when we downloaded compas and compas\_fab we had to add them to rhino. We now need to do that for the repositories we cloned as currently rhino cannot access them._ !
+While Compas and CompasFab are available to download and install using only conda commands, the ABB communication library must be cloned from GitHub and then installed in a similar way. 
 
-1) Open a new Rhino file <img src="screenshots/RhinoLogo.png" width="10%"> <br/>
-2) Type editpythonscript into the command line ![](RackMultipart20200820-4-13h5aym_html_822c8d78f68079ae.png)
-    1) This will open the python\_editor.
-3) Go to tools → options
-4) Add each src file from each of the two repositories installed
-    1) To do so hit add to search path (circled in red in photo) <br/> <img src="screenshots/fileSearch.png" width="40%"> <br/>
-    2) Navigate through your folders to find one of the two repositories.
-    3) Click on the repositories folder. Find and select the src folder and hit okay
-    4) This should look like \Users\name\Documents\GitHub\ur_online_control\src or \Users\name\Documents\GitHub\assembly_information_mode\src
-    5) Then using the up arrow bring that path to the top of the list
-    6) Repeat with the second repository <br/>
-    <img src="screenGIFs/adding file to rhino.gif" width="60%"> <br/>
-5) Finally save the rhino file wherever you want. This makes it so that Rhino remembers the paths.
-6) Done!
+You can use the command line to clone the repository or your favorite desktop application, such as the [Github app](https://desktop.github.com/). 
+
+```
+cd path/to/your_repos
+git clone https://github.com/createchaos/abb_communication.git
+pip install -e .
+python -m compas_rhino.install -p abb_communication
+```
+Tip: don't forget the dot at the end of the `pip install -e .` command! 
+
+# **Part 5: Install Docker**
+_We will use Docker to set up backends that will enable us to visualize the robots in Grasshopper. Docker containers are like pre-packaged bubbles of code that we can access to avoid building the robot communication setup from scratch._
+
+more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/backends.html 
+
+1) Docker reqires Windows 10 Pro, Enterprise, or Education.    
+    1)To check what software you have on your computer, type "System Information" in the Search Box.
+    2)If you do not already have Windows 10 Pro, Enterprise, or Education, you can get a license here: 
+        https://princeton.onthehub.com/ 
+    3)Click "start shopping", enter your Princeton login information, and download Windows 10 Education.
+
+2) Download Docker
+    Docker for Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
+    Docker for Mac: https://hub.docker.com/editions/community/docker-ce-desktop-mac 
+
+# **Part 6: Install Visual Studio Code**
+_Visual Studio Code allows us to visualize the Docker containers that are running on our machines._ 
+
+1) Download Visual Studio code 
+    https://code.visualstudio.com/
+    
+2) Install the Docker Extension for Visual Studio Code 
+    1) Navigate to the extensions tab (4th icon on the left bar with four boxes) 
+    2) Search for Docker 
+    3) Install Docker extension
+
+<img src="screenshots/dockerextension.png" width="100%">
+
+
+
