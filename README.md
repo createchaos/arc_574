@@ -130,11 +130,10 @@ more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/bac
 
 1) Docker reqires Windows 10 Pro, Enterprise, or Education.    
     1)To check what software you have on your computer, type "System Information" in the Search Box.
-    
     2)If you do not already have Windows 10 Pro, Enterprise, or Education, you can get a license here: 
         https://princeton.onthehub.com/ 
-   
     3)Click "start shopping", enter your Princeton login information, and download Windows 10 Education.
+    4)Note: If you have trouble switching the license key, try restarting your computer. 
 
 2) Download Docker
     Docker for Windows: https://hub.docker.com/editions/community/docker-ce-desktop-windows
