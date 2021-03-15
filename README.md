@@ -168,9 +168,18 @@ _Visual Studio Code allows us to visualize the Docker containers that are runnin
 _The following steps will get you setup to use the small ABB robot arms at the ECL_
 
 1) Turn on the robots 
+<img src="screenshots/on switch.JPG" width="40%">
 
-<img src="screenshots/on switch.JPG" width="60%">
-
-2) Use Visual Studio Code to compose up Docker
-
+2) Use Visual Studio Code to get Docker running
 <img src="screenGIFs/dockercompose.gif" width="60%">
+
+3) Connect the robots to your computer.  You will probably need to use an ethernet - USB adapter 
+<img src="screenshots/connect to computer.JPG" width="40%">
+
+4) Change the settings for the ethernet cable you just connected. Note: 
+<img src="screenGIFs/ethernet.gif" width="60%">
+
+5) 
+
+
+
