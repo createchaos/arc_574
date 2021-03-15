@@ -169,3 +169,8 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 
 1) Turn on the robots 
 
+<img src="screenshots/on switch.JPG" width="60%">
+
+2) Use Visual Studio Code to compose up Docker
+
+<img src="screenGIFs/dockercompose.gif" width="60%">
