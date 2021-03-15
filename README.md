@@ -176,10 +176,26 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 3) Connect the robots to your computer.  You will probably need to use an ethernet - USB adapter 
 <img src="screenshots/connect to computer.JPG" width="40%">
 
-4) Change the settings for the ethernet cable you just connected. Note: 
+4) Change the settings for the ethernet cable you just connected. Note: the IP adress you input has to start with 192.168.0 but the fourth number can be anything other than 102 and 103 (these are the IP addresses of the robots).  15 is a nice number, but feel free to pick your favorite. 
 <img src="screenGIFs/ethernet.gif" width="60%">
 
-5) 
+5) Open Rhino and Grasshopper.  Open the robot_playground_abb_arduino.ghx.  Note: If you are going to make changes to the file, please save it locally (not in the ARC 574 repository folder on your computer) 
+
+6) use Anaconda Prompt to active your environment.  Then ping the robots to check if you are connected. The small ABBs are 192.168.0.102 and 192.168.0.103 
+    Note: if you receive a message that says "request timed out", go back and make sure you have completed steps 1-5 correctly.
+<img src="screenGIFs/activateandping.gif" width="60%">
+
+7) In the Grasshopper file, connect to ROS and load the robot for visualization 
+<img src="screenGIFs/ros.gif" width="60%">
+
+8) On the robot controller, go to the Production Window.  Tap the "PP to main" button on the screen.  Press the live switch on the controller (hold half way and keep holding forever).  Press play.  On the screen you will see "waiting for connection" 
+
+9) In the Grasshopper file, init, robot on, update settings.  After hitting the robot on button, you should see "connected" on the robot controller.  
+<img src="screenGIFs/init.gif" width="60%">
+
+10) Now you are ready to send planes! 
+
+
 
 
 
