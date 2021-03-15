@@ -164,4 +164,8 @@ _Visual Studio Code allows us to visualize the Docker containers that are runnin
 <img src="screenshots/dockerextension.PNG" width="60%">
 
 
+# **Part 7: ABB Setup**
+_The following steps will get you setup to use the small ABB robot arms at the ECL_
+
+1) Turn on the robots 
 
