@@ -245,7 +245,7 @@ _The following steps will get you setup to use the UR robot arms at the ECL_
 6) use Anaconda Prompt to active your environment.  
 
 7) In the Grasshopper file, connect to ROS and load the robot for visualization 
-<img src="screenGIFs/ros.gif" width="60%">
+<img src="screenGIFs/rosur.gif" width="60%">
 
 8) Ping the robot to make sure you are connected
 
