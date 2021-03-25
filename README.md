@@ -240,7 +240,7 @@ _The following steps will get you setup to use the UR robot arms at the ECL_
 4) Change the settings for the ethernet cable you just connected. Use 192.168.10.44 to make things easier (the 44 could be changed to something else, but this is what is already set up in the file)
 <img src="screenGIFs/ethernet.gif" width="60%">
 
-5) Open Rhino and Grasshopper.  Open the robot_playground_ur_arduino.ghx.  Note: If you are going to make changes to the file, please save it locally (NOT in the ARC 574 repository folder on your computer) 
+5) Open Rhino and Grasshopper (units should be mm).  Open the robot_playground_ur_arduino.ghx.  Note: If you are going to make changes to the file, please save it locally (NOT in the ARC 574 repository folder on your computer) 
 
 6) use Anaconda Prompt to active your environment.  
 
