@@ -199,8 +199,32 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 # **Part 7: UR Setup**
 _You will need to do the following steps to use the UR3 robots in the ECL._ 
 
-1) Clone the ur_fabrication repository
+1) Clone the ur_fabrication_control repository using GitHub desktop
+<img src="screenGIFs/clonerepos.gif" width="60%">
 
+2) Switch from the Master branch to the branch called tum-princeton-restructuring
+<img src="screenGIFs/switch branch.gif" width="60%">
+
+3) A folder was just created in Documents > GitHub called ur_fabrication_control.  Copy the path for the ur_fabrication_control folder. Run the following commands one at a time in Anaconda Prompt.  Press enter after each line. 
+
+```
+activate your_env_name (or whatever your environment is named)
+cd (insert here the path you just copied in step 6)
+pip install -e .
+python -m compas_rhino.install -p ur_fabrication_control
+```
+
+4) Open a new Rhino file.  Add the src file from this folder into Rhino.  When you are finished with the following steps, save the Rhino file.  This will make sure it remembers the path. 
+    1) type EditPythonScript in the command line 
+    2) Go to tools > options
+    3) Add src file for the ur_fabrication_control repository
+        1) Add to search path (square icon with a little star in the corner) 
+        2) Navigate through your folders to find the repository.  It will be in Documents > Github > ur_fabrication_control 
+        3) Inside this folder, select the src folder and hit okay.  This path will now appear in the list 
+        4) Use the arrow icon to bring this path to the top of the list
+        5) Save your Rhino file so Rhino rememebers the path
+       
+<img src="screenGIFs/adding file to rhino.gif" width="60%">
 
 
 
