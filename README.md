@@ -164,7 +164,7 @@ _Visual Studio Code allows us to visualize the Docker containers that are runnin
 <img src="screenshots/dockerextension.PNG" width="60%">
 
 
-# **Part 7: ABB Setup**
+# **Part 7: Connect to the ABBs**
 _The following steps will get you setup to use the small ABB robot arms at the ECL_
 
 1) Turn on the robots 
@@ -186,7 +186,7 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 <img src="screenGIFs/activateandping.gif" width="60%">
 
 7) In the Grasshopper file, connect to ROS and load the robot for visualization 
-<img src="screenGIFs/ros.gif" width="60%">
+<img src="screenGIFs/rosupdate.gif" width="60%">
 
 8) On the robot controller, go to the Production Window.  Tap the "PP to main" button on the screen.  Press the live switch on the controller (hold half way and keep holding forever).  Press play.  On the screen you will see "waiting for connection" 
 
@@ -196,8 +196,8 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 10) Now you are ready to send planes! 
 
 
-# **Part 7: UR Setup**
-_You will need to do the following steps to use the UR3 robots in the ECL._ 
+# **Part 7: Access the ur_fabrication_control repository**
+_You will need to do the following steps before connecting to the UR3 robots in the ECL._ 
 
 1) Clone the ur_fabrication_control repository using GitHub desktop
 <img src="screenGIFs/clonerepos.gif" width="60%">
@@ -225,6 +225,32 @@ python -m compas_rhino.install -p ur_fabrication_control
         5) Save your Rhino file so Rhino rememebers the path
        
 <img src="screenGIFs/adding file to rhino.gif" width="60%">
+
+
+# **Part 8: Connect to the URs**
+_The following steps will get you setup to use the UR robot arms at the ECL_
+
+1) Turn on the robots 
+
+2) Use Visual Studio Code to get Docker running
+<img src="screenGIFs/dockercompose.gif" width="60%">
+
+3) Connect the robots to your computer.  You will probably need to use an ethernet - USB adapter 
+
+4) Change the settings for the ethernet cable you just connected. Use 192.168.10.44 to make things easier (the 44 could be changed to something else, but this is what is already set up in the file)
+<img src="screenGIFs/ethernet.gif" width="60%">
+
+5) Open Rhino and Grasshopper.  Open the robot_playground_ur_arduino.ghx.  Note: If you are going to make changes to the file, please save it locally (NOT in the ARC 574 repository folder on your computer) 
+
+6) use Anaconda Prompt to active your environment.  
+
+7) In the Grasshopper file, connect to ROS and load the robot for visualization 
+<img src="screenGIFs/ros.gif" width="60%">
+
+8) Ping the robot to make sure you are connected
+
+9) Now you are ready to send planes! 
+
 
 
 
