@@ -199,7 +199,7 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 # **Part 7: Access the ur_fabrication_control repository**
 _You will need to do the following steps before connecting to the UR3 robots in the ECL._ 
 
-1) Clone the ur_fabrication_control repository using GitHub desktop
+1) Clone the ur_fabrication_control repository using GitHub desktop.  The URL is: https://github.com/augmentedfabricationlab/ur_fabrication_control
 <img src="screenGIFs/clonerepos.gif" width="60%">
 
 2) Switch from the Master branch to the branch called tum-princeton-restructuring
