@@ -196,6 +196,11 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 10) Now you are ready to send planes! 
 
 
+# **Part 7: UR Setup**
+_You will need to do the following steps to use the UR3 robots in the ECL._ 
+
+1) Clone the ur_fabrication repository
+
 
 
 
