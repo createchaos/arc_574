@@ -26,16 +26,17 @@ _In this part you will use the command prompt (terminal if on mac) to install co
      &nbsp; &nbsp; &nbsp; &nbsp;<img src="screenshots/commandPrompt.png" width="40%"> <br/>
     2. Mac: Open Launchpad, then click the terminal icon. <br/>
      &nbsp; &nbsp; &nbsp; &nbsp;<img src="screenshots/terminal.png" width="40%"> <br/>
-2. Now we will use the prompt to install compas and compas\_fab. In the anaconda prompt/terminal type in each of these lines found below (hitting enter after each line). You can optionally copy and paste **all** of the lines. Either use (_crtl v / cmd v_) depending on your computer. If that does not work try right clicking. However before you do that you may want to change the name of the python environment. In this cause it is simply your_env_name but you could change this to be anything. **Just make sure you have the same environment name for every step**
+2. Now we will use the prompt to install compas and compas\_fab. In the anaconda prompt/terminal type in each of these lines found below (hitting enter after each line). You can optionally copy and paste **all** of the lines. Either use (_crtl v / cmd v_) depending on your computer. If that does not work try right clicking. However before you do that you may want to change the name of the python environment. In this case it is simply your_env_name but you could change this to be anything. **Just make sure you have the same environment name for every step**
 
 ```console
 conda config --add channels conda-forge
 conda remove --name your_env_name --all
 conda create -n your_env_name python=3.6 compas compas_fab --yes
 conda activate your_env_name
-python -m compas_rhino.install
+python -m compas_rhino.install -v 7.0
 ```
 For the last two steps you will need to allow the anaconda prompt/terminal to make changes to local rhino files. So make sure you are logged in as an administrator.
+For the last line, if your Rhino version is 6 instead of 7, simply omit the '-v 7.0' part of the last line.
 
 <img src="screenGIFs/download compas and compas_fab.gif" width="60%">
 
@@ -58,9 +59,9 @@ Creates a new python environment and installs compas and compas_fab. Python envi
  ``` 
 Activates the environment created in the previous step  <br/><br/> 
    ```console 
-   (your_env_name) python -m compas_rhino.install 
+   (your_env_name) python -m compas_rhino.install -v 7.0
    ```
-Installs compas and compas_fab for rhino <br/><br/> 
+Installs compas and compas_fab for rhino 7 (defaults to rhino 6 if the '-v 7.0' switch is omitted)<br/><br/> 
 * * *
 3. Finally check to make sure that the installation worked by typing/copying and pasting the following code: <br/>
 
@@ -71,8 +72,15 @@ compas_fab.__version__
 ```
 You should see:
 ```console
-'0.16.0';
+'0.19.1'
 ```
+
+You can type:
+```console
+exit()
+```
+to exit the >>>python prompt.
+
 <img src="screenshots/versionCompas.png" width="100%">
 
 _In this step we are starting a python file, adding the package compas\_fab (which we installed in the previous step) and requesting the package&#39;s version. You should have installed the most current package. So a version of 0.16.0 or newer should be printed on the screen._ <br/><br/> 
@@ -98,7 +106,7 @@ _The ABB communication library is a collection of [python](https://www.python.or
 
 While Compas and CompasFab are available to download and install using only conda commands, the ABB communication library must be cloned from GitHub and then installed in a similar way. 
 
-You can clone the repository using a desktop application such as the [Github app](https://desktop.github.com/). To keep things simple, however, we are just going to close the repository using the command line.  
+You can clone the repository using a desktop application such as the [Github app](https://desktop.github.com/). To keep things simple, however, we are just going to clone the repository using the command line.  
 
 1) Make a folder in Documents called GitHub
 2) Open Anaconda Prompt
@@ -111,7 +119,7 @@ conda env list
 
 Once you know the name of your environment, activate it.
 ```
-activate your_env_name
+conda activate your_env_name
 ```
 4) Navigate to the GitHub folder that you created in Documents.  Copy the path.  
 5) Clone the repository
@@ -125,9 +133,10 @@ git clone https://github.com/createchaos/abb_communication.git
 ```
 cd (insert here the path you just copied in step 6)
 pip install -e .
-python -m compas_rhino.install -p abb_communication
+python -m compas_rhino.install -p abb_communication -v 7.0
 ```
 Tip: don't forget the dot at the end of the `pip install -e .` command! 
+Tip #2: Again, if you are running Rhino 6, you can just leave out the '-v 7.0'  and it will default to install to Rhino 6
 
 # **Part 5: Install Docker**
 _We will use Docker to set up backends that will enable us to visualize the robots in Grasshopper. Docker containers are like pre-packaged bubbles of code that we can access to avoid building the robot communication setup from scratch._
@@ -148,7 +157,7 @@ more info on docker here: https://gramaziokohler.github.io/compas_fab/latest/bac
 <img src="screenshots/dockercheck.png" width="60%">
 
 4) If you get an error about needing to enable Virtualization in BIOS, follow the instructions here: https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html
-Note: The instructions will vary depending on the type of computer you have
+Note: The instructions will vary depending on the type of computer you have.
 
 # **Part 6: Install Visual Studio Code**
 _Visual Studio Code allows us to visualize the Docker containers that are running on our machines._ 
@@ -170,13 +179,13 @@ _The following steps will get you setup to use the small ABB robot arms at the E
 1) Turn on the robots 
 <img src="screenshots/on switch.JPG" width="40%">
 
-2) Use Visual Studio Code to get Docker running
+2) Use Visual Studio Code to get Docker running. You do this by navigating to abb_communication>src>abb_communication>docker and then whichever robot you want to visualize, right-clicking on the .yml file and selecting 'Compose Up'
 <img src="screenGIFs/dockercompose.gif" width="60%">
 
 3) Connect the robots to your computer.  You will probably need to use an ethernet - USB adapter 
 <img src="screenshots/connect to computer.JPG" width="40%">
 
-4) Change the settings for the ethernet cable you just connected. Note: the IP adress you input has to start with 192.168.0 but the fourth number can be anything other than 102 and 103 (these are the IP addresses of the robots).  15 is a nice number, but feel free to pick your favorite. 
+4) Change the settings for the ethernet cable you just connected. In Network & Internet Settings (PC), select 'Change Adapter Options'. Find the Realtek PCIe Ethernet option, right-click and select Properties. In the scroll box, select IPv4 item and click on Properties. Change to a hard-coded IP address of 192.168.0.XX and Subnet mask of 255.255.255.0. Note: the IP address you input has to start with 192.168.0 but the fourth number can be anything other than 102 and 103 (these are the IP addresses of the robots).  15 is a nice number, but feel free to pick your favorite. 
 <img src="screenGIFs/ethernet.gif" width="60%">
 
 5) Open Rhino and Grasshopper.  Open the robot_playground_abb_arduino.ghx.  Note: If you are going to make changes to the file, please save it locally (not in the ARC 574 repository folder on your computer) 
@@ -211,7 +220,7 @@ _You will need to do the following steps before connecting to the UR3 robots in 
 activate your_env_name (or whatever your environment is named)
 cd (insert here the path you just copied in step 6)
 pip install -e .
-python -m compas_rhino.install -p ur_fabrication_control
+python -m compas_rhino.install -p ur_fabrication_control -v 7.0
 ```
 
 4) Open a new Rhino file.  Add the src file from this folder into Rhino.  When you are finished with the following steps, save the Rhino file.  This will make sure it remembers the path. 
