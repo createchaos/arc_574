@@ -31,7 +31,7 @@ _In this part you will use the command prompt (terminal if on mac) to install co
 ```console
 conda config --add channels conda-forge
 conda remove --name your_env_name --all
-conda create -n your_env_name python=3.6 compas compas_fab --yes
+conda create -n your_env_name python compas compas_fab --yes
 conda activate your_env_name
 python -m compas_rhino.install -v 7.0
 ```
@@ -51,7 +51,7 @@ Adds the package conda-forge: _[https://conda-forge.org/#about](https://conda-fo
 ``` 
 Removes any environment with that name in preparation to create new one with updated version of python compas and compas_fab <br/>  <br/>
  ```console 
- (base) conda create -n your_env_name python=3.6 compas compas_fab --yes 
+ (base) conda create -n your_env_name python compas compas_fab --yes 
  ``` 
 Creates a new python environment and installs compas and compas_fab. Python environments are helpful because they store everything you need for a certain project. In this case, in our project our dependencies are compas and compas_fab so we include them in our environment. If we were to start another project we could then create a new environment that includes everything we need for that project.<br/>  <br/>
  ```console 
