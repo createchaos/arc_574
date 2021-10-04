@@ -217,7 +217,7 @@ _You will need to do the following steps before connecting to the UR3 robots in 
 3) A folder was just created in Documents > GitHub called ur_fabrication_control.  Copy the path for the ur_fabrication_control folder. Run the following commands one at a time in Anaconda Prompt.  Press enter after each line. 
 
 ```
-activate your_env_name (or whatever your environment is named)
+conda activate your_env_name (or whatever your environment is named)
 cd (insert here the path you just copied in step 6)
 pip install -e .
 python -m compas_rhino.install -p ur_fabrication_control -v 7.0
